@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="bootstrap.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
   <title>Cricket Merchandises</title>
 </head>
 <body>
@@ -17,55 +18,55 @@
           <div class="row text-center">
             <div class="col-md-3 py-4">
               <div class="card" style="width: 18rem;">
-                  <img width="400px" height="220px" src="img/products/bat-1.jpg" class="card-img-top" alt="...">
+                  <img width="300px" height="220px" src="img/products/bat-1.jpg" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title text-center">Cricket Bat 1</h5>
                     <div class="text-center">
-                            <a href="#" class="btn btn-dark text-success"><i class="fa fa-shopping-cart" aria-hidden="true"></i> $150</a>
+                            <a href="#" class="pop btn btn-dark text-success"><i class="fa fa-shopping-cart" aria-hidden="true"></i> $150</a>
                         </div>
                   </div>
               </div>
             </div>
             <div class="col-md-3  py-4">
                 <div class="card" style="width: 18rem;">
-                    <img width="400px" height="220px" src="img/products/bat-2.jpg" class="card-img-top" alt="...">
+                    <img width="300px" height="220px" src="img/products/bat-2.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title text-center">Cricket Bat 2</h5>
                       <div class="text-center">
-                            <a href="#" class="btn btn-dark text-success"><i class="fa fa-shopping-cart" aria-hidden="true"></i> $150</a>
+                            <a href="#" class="pop btn btn-dark text-success"><i class="fa fa-shopping-cart" aria-hidden="true"></i> $150</a>
                         </div>
                     </div>
                 </div>
               </div>
               <div class="col-md-3  py-4">
                   <div class="card" style="width: 18rem;">
-                      <img width="400px" height="220px" src="img/products/bat-3.jpg" class="card-img-top" alt="...">
+                      <img width="300px" height="220px" src="img/products/bat-3.jpg" class="card-img-top" alt="...">
                       <div class="card-body">
                         <h5 class="card-title text-center">Cricket Bat 3</h5>
                         <div class="text-center">
-                                <a href="#" class="btn btn-dark text-success"><i class="fa fa-shopping-cart" aria-hidden="true"></i> $150</a>
+                                <a href="#" class="pop btn btn-dark text-success"><i class="fa fa-shopping-cart" aria-hidden="true"></i> $150</a>
                             </div>
                       </div>
                   </div>
                 </div>
                 <div class="col-md-3  py-4">
                         <div class="card" style="width: 18rem;">
-                            <img width="400px" height="220px" src="img/products/pad-1.jpg" class="card-img-top" alt="...">
+                            <img width="300px" height="220px" src="img/products/pad-1.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                               <h5 class="card-title text-center">Cricket Bat 3</h5>
                               <div class="text-center">
-                                    <a href="#" class="btn btn-dark text-success"><i class="fa fa-shopping-cart" aria-hidden="true"></i> $150</a>
+                                    <a href="#" class="pop btn btn-dark text-success"><i class="fa fa-shopping-cart" aria-hidden="true"></i> $150</a>
                                     </div>
                             </div>
                         </div>
                 </div>
                 <div class="col-md-3  py-4">
-                        <div class="card" style="width: 18rem;">
-                            <img width="400px" height="220px" src="img/products/pad-2.jpg" class="card-img-top" alt="...">
+                        <div class="card" style="width: 18rem;" >
+                            <img width="300px" height="220px" src="img/products/pad-2.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                               <h5 class="card-title text-center">Cricket Bat 3</h5>
                               <div class="text-center">
-                                    <a href="#" class="btn btn-dark text-success"><i class="fa fa-shopping-cart" aria-hidden="true"></i> $150</a>
+                                    <a href="#" class="pop btn btn-dark text-success"><i class="fa fa-shopping-cart" aria-hidden="true"></i> $180</a>
                                     </div>
                             </div>
                         </div>
@@ -76,21 +77,25 @@
         </div>
 
         <!--Product Modal-->
-        <div class="modal" tabindex="-1" role="dialog">
+        <div id="myModal" class="modal fade" tabindex="-1" width="200px" role="dialog">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title">Modal title</h5>
+                      <h5 class="modal-title text-center">Product Info :</h5>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
                     </div>
-                    <div class="modal-body">
-                      <p>Modal body text goes here.</p>
+                    <div class="modal-body text-center">
+                     <h4 class="product-title text-capitalize font-weight-bold text-info"></h4>
+                     <div class="border border-right-0 border-left-0 border-info p-2">
+                     <img width="200px" height="200px" src="img/products/placehold.gif" class="product-img" alt="Product Image">
+                    </div>
+                     <h3 class="product-price text-success"></h3>
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                      <button type="button" class="btn btn-info">Make Payment</button>
                     </div>
                   </div>
                 </div>
@@ -101,5 +106,20 @@
   
 
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script>
+  $(document).ready(function(){
+    $(".pop").on("click",function(){
+      var title = $(this).closest("div.card").find(".card-title").text();
+      var img = $(this).closest("div.card").find('img').attr("src");
+      var price = $(this).text();
+      $(".product-title").text(title);
+      $(".product-img").attr("src",img);
+      $(".product-price").text(price);
+      $('#myModal').modal('toggle');
+    });
+  });
+  </script>
 </html>
 
