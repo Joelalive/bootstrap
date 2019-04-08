@@ -17,56 +17,56 @@
         <br>
           <div class="row text-center">
             <div class="col-md-3 py-4">
-              <div class="card" style="width: 18rem;">
+              <div class="card  mb-4 shadow-sm" style="width: 18rem;">
                   <img width="300px" height="220px" src="img/products/bat-1.jpg" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title text-center">Cricket Bat 1</h5>
                     <div class="text-center">
-                            <a href="#" class="pop btn btn-dark text-success"><i class="fa fa-shopping-cart" aria-hidden="true"></i> $150</a>
+                            <a href="#" class="pop border btn btn-light text-success"><i class="fa fa-shopping-cart" aria-hidden="true"></i> ₹<span>1500</span></a>
                         </div>
                   </div>
               </div>
             </div>
             <div class="col-md-3  py-4">
-                <div class="card" style="width: 18rem;">
+                <div class="card  mb-4 shadow-sm" style="width: 18rem;">
                     <img width="300px" height="220px" src="img/products/bat-2.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                       <h5 class="card-title text-center">Cricket Bat 2</h5>
                       <div class="text-center">
-                            <a href="#" class="pop btn btn-dark text-success"><i class="fa fa-shopping-cart" aria-hidden="true"></i> $150</a>
+                            <a href="#" class="pop border btn btn-light text-success"><i class="fa fa-shopping-cart" aria-hidden="true"></i>  ₹<span>1800</span></a>
                         </div>
                     </div>
                 </div>
               </div>
               <div class="col-md-3  py-4">
-                  <div class="card" style="width: 18rem;">
+                  <div class="card  mb-4 shadow-sm" style="width: 18rem;">
                       <img width="300px" height="220px" src="img/products/bat-3.jpg" class="card-img-top" alt="...">
                       <div class="card-body">
                         <h5 class="card-title text-center">Cricket Bat 3</h5>
                         <div class="text-center">
-                                <a href="#" class="pop btn btn-dark text-success"><i class="fa fa-shopping-cart" aria-hidden="true"></i> $150</a>
+                                <a href="#" class="pop border btn btn-light text-success"><i class="fa fa-shopping-cart" aria-hidden="true"></i> ₹<span>1400</span></a>
                             </div>
                       </div>
                   </div>
                 </div>
                 <div class="col-md-3  py-4">
-                        <div class="card" style="width: 18rem;">
+                        <div class="card  mb-4 shadow-sm" style="width: 18rem;">
                             <img width="300px" height="220px" src="img/products/pad-1.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
-                              <h5 class="card-title text-center">Cricket Bat 3</h5>
+                              <h5 class="card-title text-center">Cricket Pad 1</h5>
                               <div class="text-center">
-                                    <a href="#" class="pop btn btn-dark text-success"><i class="fa fa-shopping-cart" aria-hidden="true"></i> $150</a>
+                                    <a href="#" class="pop border btn btn-light text-success"><i class="fa fa-shopping-cart" aria-hidden="true"></i>  ₹<span>1900</span></a>
                                     </div>
                             </div>
                         </div>
                 </div>
                 <div class="col-md-3  py-4">
-                        <div class="card" style="width: 18rem;" >
+                        <div class="card  mb-4 shadow-sm" style="width: 18rem;" >
                             <img width="300px" height="220px" src="img/products/pad-2.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
-                              <h5 class="card-title text-center">Cricket Bat 3</h5>
+                              <h5 class="card-title text-center">Cricket Pad 2</h5>
                               <div class="text-center">
-                                    <a href="#" class="pop btn btn-dark text-success"><i class="fa fa-shopping-cart" aria-hidden="true"></i> $180</a>
+                                    <a href="#" class="pop border btn btn-light text-success"><i class="fa fa-shopping-cart" aria-hidden="true"></i> ₹<span>2000</span></a>
                                     </div>
                             </div>
                         </div>
@@ -91,7 +91,24 @@
                      <div class="border border-right-0 border-left-0 border-info p-2">
                      <img width="200px" height="200px" src="img/products/placehold.gif" class="product-img" alt="Product Image">
                     </div>
-                     <h3 class="product-price text-success"></h3>
+                    <div class="row justify-content-center">
+                    <div class="form-group col-4">
+                      <h4 class="mt-1">QTY :</h4>
+                    </div>
+                    <div class="form-group col-3">
+                        <input class="form-control form-control-sm mt-1" id="pdt_qty" value="1" min="1" max="10"  type="number">
+                      </div>
+                  </div>
+                  <div id="single" class="row justify-content-center">
+                      <div class="form-group col-4">
+                       <h3 class="text-success">₹<span class="product-price"></span></h3>
+                      </div>
+                    </div>
+                    <div id="total" class="row justify-content-center">
+                        <div class="form-group col-4">
+                         <h3 class="text-success">₹<span class="product-total"></span></h3>
+                        </div>
+                      </div>
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
@@ -110,15 +127,30 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script>
   $(document).ready(function(){
+
     $(".pop").on("click",function(){
       var title = $(this).closest("div.card").find(".card-title").text();
       var img = $(this).closest("div.card").find('img').attr("src");
-      var price = $(this).text();
+      var price = $(this).find("span").text();
+      $("#pdt_qty").val(1);
+      $(".product-total").val('');
       $(".product-title").text(title);
       $(".product-img").attr("src",img);
       $(".product-price").text(price);
+      $("#total").hide();
+      $("#single").show();
       $('#myModal').modal('toggle');
     });
+
+    $("#pdt_qty").on("change",function(){
+      var price = $(this).closest(".modal-body").find("span.product-price").text();
+      var qty = $(this).val();
+      var total = price * qty;
+      $("#single").hide();
+      $("#total").show();
+      $(".product-total").text(total);
+    });
+
   });
   </script>
 </html>
